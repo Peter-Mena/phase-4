@@ -4,3 +4,15 @@ then, The shell forks a child process and uses exec() to run the program.
 The kernel loads ls, which reads the current directory using system calls.
 then the output is sent to the terminal.
 
+Q2: Explain the types of processes in Linux: daemon, zombie, orphan. How can you detect them?
+daemon :it's a process that runs from the begining at starting the OS and keep running in the background
+it's like systemd
+to detect it : ps aux | grep 'sshd\|cron\|systemd'
+
+zombie: a child that ended its task and his parent didn't check on him so the child becomes zombie
+and the kernel will delete its resoucres after few seconds
+to detect it :  ps aux | grep 'Z' #search for stat 'Z' or 'Z+' 
+
+orphan: a chile whose parent has died. and other parent will check on him like systemd
+if no one checked on him, it will become a zombie
+to detect it:An orphan process is a process whose parent has terminated, so it is adopted by the init process (PID 1).
