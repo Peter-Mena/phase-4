@@ -1,0 +1,14 @@
+task-1: Run a background task to simulate sensor polling.
+cd iot_logger
+cd scripts
+nano sensor_script.py
+    import time
+    import random
+
+    while True:
+        temp = round(random.uniform(10.0, 30.0), 2)
+        print(f"Temperature: {temp}°C")
+        time.sleep(10)
+
+python3 sensor_script.py &
+
