@@ -1,0 +1,6 @@
+Q1: What happens step by step when you type a command in bash (e.g., ls) until you see the output?
+the shell (Bash) checks if ls is an alias or built-in,If not, it searches for the ls executable in the directories listed in $PATH
+then, The shell forks a child process and uses exec() to run the program.
+The kernel loads ls, which reads the current directory using system calls.
+then the output is sent to the terminal.
+
