@@ -18,3 +18,10 @@ ps aux | grep sensor.py
 task-3: Check network states (established connections). 
 netstat -tuln | grep ESTABLISHED
 
+task-4: Try foreground and background switching.
+cd iot_logger
+cd scripts
+python3 sensor_script.py #ctrl+z to stop it 
+bg #to run it in the background
+fg #to run it in the foreground
+
