@@ -16,3 +16,9 @@ to detect it :  ps aux | grep 'Z' #search for stat 'Z' or 'Z+'
 orphan: a chile whose parent has died. and other parent will check on him like systemd
 if no one checked on him, it will become a zombie
 to detect it:An orphan process is a process whose parent has terminated, so it is adopted by the init process (PID 1).
+
+
+Q3: Why do we need Inter-Process Communication (IPC)? List some IPC mechanisms and real-life examples.
+Inter-Process Communication (IPC) is needed because processes run in isolated memory spaces and cannot directly share data. 
+so the IPC allows them to communicate for tasks like data sharing.
+IPC mechanisms: Pipes, Signals,Sockets
