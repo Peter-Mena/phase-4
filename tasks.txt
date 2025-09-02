@@ -25,3 +25,5 @@ python3 sensor_script.py #ctrl+z to stop it
 bg #to run it in the background
 fg #to run it in the foreground
 
+task-5: Kill a process if needed.
+kill 33523  #kill PID process
